@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; 
+    }
+
+    .project-card {
+      width: 50%;
+      border: 1px solid #ced4da;
+      padding: 20px;
+      margin: auto;
+      background-color: #fff; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-header {
+      margin-bottom: 20px;
+      padding: 15px;
+      color: #fff;
+    }
+
+    .project-name {
+      background-color: #007bff; 
+    }
+
+    .project-author {
+      background-color: crimson; 
+    }
+
+    .project-description {
+      background-color: #17a2b8; 
+    }
+
+    h3, h4, h5 {
+      margin: 0; 
+    }
+
+   
+
+  </style>
+</head>
+
+<body>
+
+  <div class="project-card">
+    <h3 class="display-5 project-header project-name text-dark">
+      Project: <%= project.name %>
+    </h3>
+    <h4 class="display-6 project-header project-author text-dark">
+      Author: <%= project.author %>
+    </h4>
+    <h5 class="display-6 project-header project-description text-dark">
+      Description: <%= project.description %>
+    </h5>
+  </div>
+
+<%-include('./partials/_issues'); %>
+
+
+
+</body>
+
+</html>
